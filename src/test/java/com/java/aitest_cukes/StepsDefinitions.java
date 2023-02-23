@@ -46,8 +46,6 @@ public class StepsDefinitions {
 		driver = Hooks.driver;
 	}
 
-
-
 	@Given("^I on aiTest Login Page$")
 	public void i_on_aiTest_Login_Page() throws Throwable {
 	   driver.get("https://ui.aitest.dev.appliedaiconsulting.com/");
@@ -111,8 +109,6 @@ public class StepsDefinitions {
 		driver.findElement(By.xpath("(//input[@id='search-test'])[1]")).sendKeys(arg1);
 	
 	}
-	
-
 	
 //	@Then("^I validate Tooptip count and bubbles present on dashboard are equal$")
 //	public void i_validate_Tooptip_count_and_bubbles_present_on_dashboard_are_equal() throws Throwable {
@@ -196,8 +192,6 @@ public class StepsDefinitions {
 		String ActFF_txt = Hooks.driver.findElement(By.xpath("//p[normalize-space()='Mozilla Firefox']")).getText();
 		String ExFF_txt = Hooks.driver.findElement(By.xpath("//span[normalize-space()='Mozilla Firefox']")).getText();
 		Assert.assertEquals(ExFF_txt, ActFF_txt);
-		
-		
 		Thread.sleep(1000);
 		Utilities.clickOnElement("//button[normalize-space()='Apply Filter']");
 	}
@@ -287,12 +281,8 @@ public class StepsDefinitions {
 			   String message = driver.findElement(By.xpath("//span[normalize-space()='Oops! No test found!']")).getText();
 			   System.out.println("filter message" +message);
 			   Assert.assertEquals(message, "Oops! No test found!");
-			   
-			   
-			
-		}
-		
-		
+			 	
+		}	
 	}
 	
 	@Then("^I applied filter with Pass,Least Time Taken,chrome for sorting of bubbles$")
@@ -471,13 +461,6 @@ public class StepsDefinitions {
 		boolean Apply_Enable = Hooks.driver.findElement(By.xpath("//button[normalize-space()='Apply Filter']")).isEnabled();
 		Assert.assertEquals(true, Apply_Enable);
 	}
-
-
-
-
-	
-	 
-
 
 
 	static void sleepTime(){

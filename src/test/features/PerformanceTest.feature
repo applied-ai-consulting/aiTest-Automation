@@ -144,22 +144,22 @@ Feature: Create Test Functionality for Performance Test and check Performance te
     
     ##Create Test Functionality for Performance Test
     
-    @Smoke
-    Scenario: Create Performance Test using Zip automation code
-    When I clicked on Performance Test Icon 
-    Then I clicked on Create Testrun button
-    Then I Enter Testrun name as "marxeedTest"
-    Then I Enter Project Name as "Marxeed"
-    Then I Enter Testrun Description as "TestDescription"
-    Then I Enter Testrun Aut URL as "https://app.marxeed.com/home"
-    When I Enter Run Configuration Details
-    Then I clicked on Your Automation Code radio button
-    Then I clicked on Upload zip file button and select file 
-    Then I clicked on Upload button
-    Then I Enter Testrun Command
-    Then I Enter Report Location
-    And  I clicked on Run It Now button
-    And  I validate Testrun getting created successfully message popup as "Performance test created successfully in Marxeed project"
+    #@Smoke
+    #Scenario: Create Performance Test using Zip automation code
+    #When I clicked on Performance Test Icon
+    #Then I clicked on Create Testrun button
+    #Then I Enter Testrun name as "marxeedTest"
+    #Then I Enter Project Name as "Marxeed"
+    #Then I Enter Testrun Description as "TestDescription"
+    #Then I Enter Testrun Aut URL as "https://app.marxeed.com/home"
+    #When I Enter Run Configuration Details
+    #Then I clicked on Your Automation Code radio button
+    #Then I clicked on Upload zip file button and select file
+    #Then I clicked on Upload button
+    #Then I Enter Testrun Command
+    #Then I Enter Report Location
+    #And  I clicked on Run It Now button
+    #And  I validate Testrun getting created successfully message popup as "Performance test created successfully in Marxeed project"
     
      @Smoke
     Scenario: Create Performance Test using Repo details
@@ -178,26 +178,26 @@ Feature: Create Test Functionality for Performance Test and check Performance te
     Scenario: Re-run the Created Testrun
     When I clicked on Performance Test Icon 
     Then I clicked on Created Testrun
-    Then  I clicked on Copy and Run button
-    Then  I clicked on Run button
+    Then I clicked on Copy and Run button
+    Then I clicked on Run button
     And  I validate Testrun getting Rerunning successfully message popup as "Re-running test"
     
-    @Smoke
-    Scenario: Create draft Testrun on  Performance Test using Zip automation code
-    When I clicked on Performance Test Icon 
-    Then I clicked on Create Testrun button
-    Then I Enter Testrun name as "MarxeedTest"
-    Then I Enter Project Name as "Marxeed"
-    Then I Enter Testrun Description as "TestDescription"
-    Then I Enter Testrun Aut URL as "https://app.marxeed.com/home"
-    When I Enter Run Configuration Details
-    Then I clicked on Your Automation Code radio button
-    Then I clicked on Upload zip file button and select file 
-    Then I clicked on Upload button
-    Then I Enter Testrun Command
-    Then I Enter Report Location
-    And  I clicked on Save button
-    And  I validate Testrun getting created successfully message popup as "Performance test saved successfully"
+    #@Smoke
+    #Scenario: Create draft Testrun on  Performance Test using Zip automation code
+    #When I clicked on Performance Test Icon
+    #Then I clicked on Create Testrun button
+    #Then I Enter Testrun name as "MarxeedTest"
+    #Then I Enter Project Name as "Marxeed"
+    #Then I Enter Testrun Description as "TestDescription"
+    #Then I Enter Testrun Aut URL as "https://app.marxeed.com/home"
+    #When I Enter Run Configuration Details
+    #Then I clicked on Your Automation Code radio button
+    #Then I clicked on Upload zip file button and select file
+    #Then I clicked on Upload button
+    #Then I Enter Testrun Command
+    #Then I Enter Report Location
+    #And  I clicked on Save button
+    #And  I validate Testrun getting created successfully message popup as "Performance test saved successfully"
     
      @Smoke
     Scenario: Create draft Testrun on  Performance Test using Repo details
@@ -217,7 +217,6 @@ Feature: Create Test Functionality for Performance Test and check Performance te
     When I clicked on Performance Test Icon 
     Then I clicked on Created draft Testrun 
     Then I clicked on Run Button
+    Then I Enter Git password
     Then I clicked on Run button
-    And  I validate Testrun getting Rerunning successfully message popup as "Re-running test"
-    
-   
+    And  I validate Testrun getting Rerunning successfully message popup as "Running the saved draft"

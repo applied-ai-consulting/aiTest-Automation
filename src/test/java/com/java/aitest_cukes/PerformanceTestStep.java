@@ -208,19 +208,19 @@ public class PerformanceTestStep {
 	public void i_validate_all_the_error_messages_of_the_repo_details_field() throws Throwable {
 		String Error_msg1 = Hooks.driver.findElement(By.xpath("(//p[@id='component-error-text'])[4]")).getText();
 		System.out.println("error message1="+Error_msg1);
-		Assert.assertEquals(Error_msg1, "Repo URL is required");
+		Assert.assertEquals(Error_msg1, "Repo URL is required.");
 		String Error_msg2 = Hooks.driver.findElement(By.xpath("(//p[@id='component-error-text'])[5]")).getText();
 		System.out.println("error message2="+Error_msg2);
-		Assert.assertEquals(Error_msg2, "Git Username is required");
+		Assert.assertEquals(Error_msg2, "Git Username is required.");
 		String Error_msg3 = Hooks.driver.findElement(By.xpath("(//p[@id='component-error-text'])[6]")).getText();
 		System.out.println("error message3="+Error_msg3);
-		Assert.assertEquals(Error_msg3, "Git Token / Password is required");
+		Assert.assertEquals(Error_msg3, "Git Token / Password is required.");
 		String Error_msg4 = Hooks.driver.findElement(By.xpath("(//p[@id='component-error-text'])[7]")).getText();
 		System.out.println("error message4="+Error_msg4);
-		Assert.assertEquals(Error_msg4, "Report File Location is required");
+		Assert.assertEquals(Error_msg4, "Report File Location is required.");
 		String Error_msg5 = Hooks.driver.findElement(By.xpath("(//p[@id='component-error-text'])[8]")).getText();
 		System.out.println("error message2="+Error_msg5);
-		Assert.assertEquals(Error_msg5, "Test Run Command is required");
+		Assert.assertEquals(Error_msg5, "Test Run Command is required.");
 		
 		
 		
@@ -272,8 +272,8 @@ public class PerformanceTestStep {
 		Utilities.clickOnElement("//div[@role='presentation']");
 		Robot rb=new Robot();
 		rb.delay(2000);
-//		StringSelection ss = new StringSelection(System.getProperty("user.dir")+"\\Documents\\marXeed_UiAutomation140223_R1.zip");
-        StringSelection ss=new StringSelection("C:\\Users\\Supriya\\Desktop\\aitest zipcode\\marXeed_UiAutomation140223_R1.zip");
+		StringSelection ss = new StringSelection(System.getProperty("user.dir")+"\\Documents\\marXeed_UiAutomation140223_R1.zip");
+//        StringSelection ss=new StringSelection("C:\\Users\\Supriya\\Desktop\\aitest zipcode\\marXeed_UiAutomation140223_R1.zip");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 		
 		rb.keyPress(KeyEvent.VK_CONTROL);
@@ -402,21 +402,21 @@ public class PerformanceTestStep {
 	@Then("^I validate all error message$")
 	public void i_validate_all_error_message() throws Throwable {
 		String Error_msg1 = Hooks.driver.findElement(By.xpath("(//p[@id='component-error-text'])[1]")).getText();
-		Assert.assertEquals(Error_msg1, "Test name is required");
+		Assert.assertEquals(Error_msg1, "Test name is required.");
 		String Error_msg2 = Hooks.driver.findElement(By.xpath("(//p[@id='component-error-text'])[2]")).getText();
 		Assert.assertEquals(Error_msg2, "");//Project is required
 		String Error_msg3 = Hooks.driver.findElement(By.xpath("(//p[@id='component-error-text'])[3]")).getText();
-		Assert.assertEquals(Error_msg3, "AUT URL is required");
+		Assert.assertEquals(Error_msg3, "AUT URL is required.");
 		String Error_msg4 = Hooks.driver.findElement(By.xpath("(//p[@id='component-error-text'])[4]")).getText();
-		Assert.assertEquals(Error_msg4, "Repo URL is required");
+		Assert.assertEquals(Error_msg4, "Repo URL is required.");
 		String Error_msg5 = Hooks.driver.findElement(By.xpath("(//p[@id='component-error-text'])[5]")).getText();
-		Assert.assertEquals(Error_msg5, "Git Username is required");
+		Assert.assertEquals(Error_msg5, "Git Username is required.");
 		String Error_msg6 = Hooks.driver.findElement(By.xpath("(//p[@id='component-error-text'])[6]")).getText();
-		Assert.assertEquals(Error_msg6, "");//Git Token / Password is required
+		Assert.assertEquals(Error_msg6, "Git Token / Password is required.");
 		String Error_msg7 = Hooks.driver.findElement(By.xpath("(//p[@id='component-error-text'])[7]")).getText();
-		Assert.assertEquals(Error_msg7, "");//Report File Location is required
+		Assert.assertEquals(Error_msg7, "Report File Location is required.");
 		String Error_msg8 = Hooks.driver.findElement(By.xpath("(//p[@id='component-error-text'])[8]")).getText();
-		Assert.assertEquals(Error_msg8, "Test Run Command is required");
+		Assert.assertEquals(Error_msg8, "Test Run Command is required.");
 	}
 	
 	@Then("^I Enter Testrun name as \"([^\"]*)\"$")
@@ -733,6 +733,17 @@ public class PerformanceTestStep {
 		Assert.assertEquals(true, Dashboard);
 		Thread.sleep(2000);
 	}
+	
+	@Then("^I Enter Git password$")
+	public void i_Enter_Git_password() throws Throwable {
+		
+		Actions a = new Actions(Hooks.driver);
+		a.sendKeys(Keys.PAGE_DOWN).build().perform();
+		Utilities.clickOnElement("//input[@placeholder='Git Password']");
+		Hooks.driver.findElement(By.xpath("//input[@placeholder='Git Password']")).sendKeys("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");
+				
+	}
+
 }
 
 
