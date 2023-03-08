@@ -48,7 +48,7 @@ public class StepsDefinitions {
 
 	@Given("^I on aiTest Login Page$")
 	public void i_on_aiTest_Login_Page() throws Throwable {
-	   driver.get("https://ui.aitest.dev.appliedaiconsulting.com/");
+	   driver.get("https://app.aitest.dev.appliedaiconsulting.com/");
 	}
 //	@Then("^I enter loginId as \"([^\"]*)\"$")
 //	public void i_enter_loginId_as(String userId) throws Throwable {

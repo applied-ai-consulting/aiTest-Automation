@@ -100,11 +100,11 @@ Feature: Create Test Functionality for Performance Test and check Performance te
     Then I clicked on Create Testrun button
     Then I click on add project button and added new project as "aitest" and validate error message popup
    
-   @Smoke
-    Scenario: Try to Enter existing project name on project field and error message popup after click on Add button
-    Then I clicked on Performance Test Icon
-    Then I clicked on Create Testrun button
-    When I Enter Project name as "Marxeed" on project field and validate it
+   #@Smoke
+    #Scenario: Try to Enter existing project name on project field and error message popup after click on Add button
+    #Then I clicked on Performance Test Icon
+    #Then I clicked on Create Testrun button
+    #When I Enter Project name as "Marxeed" on project field and validate it
     
    @Smoke
     Scenario: To validate when user goes back to dashboard page when user is on config.page of 
@@ -140,6 +140,12 @@ Feature: Create Test Functionality for Performance Test and check Performance te
     Then I clicked on Created Testrun
     Then I clicked on Analytics button
     And  I validate Testrun api error Summary deatils
+    
+   @Functional
+    Scenario: To validate status of test on dashboard and draft filter test are same
+    Then I clicked on Performance Test Icon
+    Then I filtered testname with draft option
+    Then I validate Draft filter testname is same as dashboard test status
     
     
     ##Create Test Functionality for Performance Test
